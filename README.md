@@ -51,9 +51,9 @@ Six experiments were evaluated:
 | E1 | 12 | CNN from scratch | 30 |
 | E2 | 12 | MobileNetV2 pretrained | 30 |
 | E3 | 12 | MobileNetV2 fine-tuning | 30 |
-| E1-36 | 36 | CNN from scratch | 10 |
-| E2-36 | 36 | MobileNetV2 pretrained | 10 |
-| E3-36 | 36 | MobileNetV2 fine-tuning | 10 |
+| E1' | 36 | CNN from scratch | 10 |
+| E2' | 36 | MobileNetV2 pretrained | 10 |
+| E3' | 36 | MobileNetV2 fine-tuning | 10 |
 
 ## Results
 
