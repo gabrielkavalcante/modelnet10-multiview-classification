@@ -24,9 +24,20 @@ The rendered datasets are not included in this repository due to file size. They
 
 To generate the 12-view dataset:
 
-```bash
+```
 python scripts/render_12views.py
 
 To generate the 36-view dataset:
 
 python scripts/render_36views.py
+
+The original ModelNet10 folder must be available in the repository root or in the path defined inside the rendering scripts.
+
+Dataset verification
+
+After rendering, the generated datasets can be checked with:
+
+```
+python scripts/verify_12views.py
+python scripts/verify_36views.py
+```
