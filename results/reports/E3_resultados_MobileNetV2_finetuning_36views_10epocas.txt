@@ -1,0 +1,48 @@
+RESULTADOS NO TESTE POR OBJETO - E3 MOBILENETV2 FINE-TUNING 36 VIEWS 10 ÉPOCAS
+=============================================
+Accuracy:  0.9130
+Precision: 0.9167
+Recall:    0.9115
+F1-score:  0.9119
+
+Classes:
+0: bathtub
+1: bed
+2: chair
+3: desk
+4: dresser
+5: monitor
+6: night_stand
+7: sofa
+8: table
+9: toilet
+
+Relatório por classe:
+              precision    recall  f1-score   support
+
+     bathtub       1.00      0.96      0.98        50
+         bed       0.99      0.98      0.98       100
+       chair       0.97      0.99      0.98       100
+        desk       0.74      0.84      0.79        86
+     dresser       0.91      0.74      0.82        86
+     monitor       0.98      0.99      0.99       100
+ night_stand       0.75      0.88      0.81        86
+        sofa       0.95      0.97      0.96       100
+       table       0.87      0.76      0.81       100
+      toilet       1.00      1.00      1.00       100
+
+    accuracy                           0.91       908
+   macro avg       0.92      0.91      0.91       908
+weighted avg       0.92      0.91      0.91       908
+
+Matriz de confusão:
+[[ 48   1   0   0   0   0   0   1   0   0]
+ [  0  98   0   0   0   0   0   1   1   0]
+ [  0   0  99   0   0   0   0   1   0   0]
+ [  0   0   1  72   0   0   4   2   7   0]
+ [  0   0   0   2  64   1  19   0   0   0]
+ [  0   0   0   0   0  99   1   0   0   0]
+ [  0   0   1   0   6   0  76   0   3   0]
+ [  0   0   1   0   0   1   1  97   0   0]
+ [  0   0   0  23   0   0   1   0  76   0]
+ [  0   0   0   0   0   0   0   0   0 100]]

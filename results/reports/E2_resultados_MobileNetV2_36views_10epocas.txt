@@ -1,0 +1,48 @@
+RESULTADOS NO TESTE POR OBJETO - E2 MOBILENETV2 36 VIEWS 10 ÉPOCAS
+=============================================
+Accuracy:  0.9020
+Precision: 0.9055
+Recall:    0.8959
+F1-score:  0.8983
+
+Classes:
+0: bathtub
+1: bed
+2: chair
+3: desk
+4: dresser
+5: monitor
+6: night_stand
+7: sofa
+8: table
+9: toilet
+
+Relatório por classe:
+              precision    recall  f1-score   support
+
+     bathtub       1.00      0.88      0.94        50
+         bed       0.98      0.98      0.98       100
+       chair       0.94      0.99      0.97       100
+        desk       0.77      0.79      0.78        86
+     dresser       0.90      0.71      0.79        86
+     monitor       0.98      1.00      0.99       100
+ night_stand       0.72      0.85      0.78        86
+        sofa       0.89      0.97      0.93       100
+       table       0.87      0.80      0.83       100
+      toilet       1.00      0.99      0.99       100
+
+    accuracy                           0.90       908
+   macro avg       0.91      0.90      0.90       908
+weighted avg       0.91      0.90      0.90       908
+
+Matriz de confusão:
+[[ 44   1   0   0   0   0   0   5   0   0]
+ [  0  98   1   0   0   0   0   1   0   0]
+ [  0   0  99   0   0   0   0   1   0   0]
+ [  0   0   2  68   0   0   4   5   7   0]
+ [  0   0   0   2  61   2  21   0   0   0]
+ [  0   0   0   0   0 100   0   0   0   0]
+ [  0   0   1   0   7   0  73   0   5   0]
+ [  0   1   1   0   0   0   1  97   0   0]
+ [  0   0   0  18   0   0   2   0  80   0]
+ [  0   0   1   0   0   0   0   0   0  99]]

@@ -1,0 +1,48 @@
+RESULTADOS NO TESTE POR OBJETO - E1 CNN 36 VIEWS 10 ÉPOCAS
+=============================================
+Accuracy:  0.8040
+Precision: 0.8181
+Recall:    0.7699
+F1-score:  0.7670
+
+Classes:
+0: bathtub
+1: bed
+2: chair
+3: desk
+4: dresser
+5: monitor
+6: night_stand
+7: sofa
+8: table
+9: toilet
+
+Relatório por classe:
+              precision    recall  f1-score   support
+
+     bathtub       1.00      0.30      0.46        50
+         bed       0.90      0.94      0.92       100
+       chair       0.82      1.00      0.90       100
+        desk       0.76      0.44      0.56        86
+     dresser       0.74      0.60      0.67        86
+     monitor       0.90      0.91      0.91       100
+ night_stand       0.70      0.73      0.72        86
+        sofa       0.69      0.93      0.79       100
+       table       0.83      0.92      0.87       100
+      toilet       0.84      0.92      0.88       100
+
+    accuracy                           0.80       908
+   macro avg       0.82      0.77      0.77       908
+weighted avg       0.81      0.80      0.79       908
+
+Matriz de confusão:
+[[ 15   4   0   0   0   1   0  30   0   0]
+ [  0  94   1   0   0   0   0   4   1   0]
+ [  0   0 100   0   0   0   0   0   0   0]
+ [  0   6   7  38   0   1   4   8  15   7]
+ [  0   0   1   3  52   5  21   0   0   4]
+ [  0   0   4   0   2  91   1   0   0   2]
+ [  0   0   1   1  15   1  63   0   3   2]
+ [  0   1   3   0   0   1   0  93   0   2]
+ [  0   0   0   8   0   0   0   0  92   0]
+ [  0   0   5   0   1   1   1   0   0  92]]
