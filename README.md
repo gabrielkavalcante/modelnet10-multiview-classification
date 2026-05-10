@@ -2,7 +2,7 @@
 Code for multi-view 2D projection and classification of 3D objects from ModelNet10.
 
 
-markdown
+```markdown
 # ModelNet10 Multi-view Classification
 
 This repository contains the code used for multi-view 2D projection and classification of 3D objects from the ModelNet10 dataset.
