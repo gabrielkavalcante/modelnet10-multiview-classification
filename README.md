@@ -1,4 +1,4 @@
-ModelNet10 Multi-view Classification
+# ModelNet10 Multi-view Classification
 
 This repository contains the code used for multi-view 2D projection and classification of 3D objects from the ModelNet10 dataset.
 
@@ -19,13 +19,13 @@ The rendered datasets are not included in this repository due to file size. They
 
 To generate the 12-view dataset:
 
-```bash
+```
 python scripts/render_12views.py
 ```
 
 To generate the 36-view dataset:
 
-```bash
+```
 python scripts/render_36views.py
 ```
 
@@ -35,7 +35,7 @@ The original ModelNet10 folder must be available in the repository root or in th
 
 After rendering, the generated datasets can be checked with:
 
-```bash
+```
 python scripts/verify_12views.py
 python scripts/verify_36views.py
 ```
@@ -87,7 +87,7 @@ docs/         Additional documentation
 
 Install the required packages with:
 
-```bash
+```
 pip install -r requirements.txt
 ```
 
