@@ -1,0 +1,9 @@
+experiment,views,model,training,epochs,accuracy,precision,recall,macro_f1,training_time_min
+Cs12,12,Custom CNN,scratch,30,0.8051,0.8233,0.7685,0.7652,50
+Es12,12,EfficientNetB0,scratch,30,0.8987,0.9005,0.8912,0.8944,60
+Ep12,12,EfficientNetB0,pretrained (frozen base),30,0.9185,0.9208,0.9175,0.9176,40
+Ef12,12,EfficientNetB0,partial fine-tuning,30,0.9275,0.9326,0.9257,0.9256,42
+Cs36,36,Custom CNN,scratch,10,0.8040,0.8181,0.7699,0.7670,56
+Es36,36,EfficientNetB0,scratch,10,0.8789,0.8861,0.8707,0.8734,69
+Ep36,36,EfficientNetB0,pretrained (frozen base),10,0.9176,0.9196,0.9173,0.9178,48
+Ef36,36,EfficientNetB0,partial fine-tuning,10,0.9208,0.9231,0.9202,0.9202,51

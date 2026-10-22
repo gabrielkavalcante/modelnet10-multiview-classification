@@ -1,0 +1,3 @@
+configuration,lr_frozen,lr_finetune,batch_size,macro_f1
+Originally used,1e-4,1e-5,64,0.9226
+Exhaustive search,1e-4,1e-4,64,0.9256
