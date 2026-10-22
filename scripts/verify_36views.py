@@ -1,7 +1,10 @@
+import sys
 from pathlib import Path
 
 
-DATASET_PATH = Path("ModelNet10_36views_224x224")
+# Optional first argument overrides the folder, e.g. for the elevation ablation:
+#   python scripts/verify_36views.py ModelNet10_36views_224x224_elev10
+DATASET_PATH = Path(sys.argv[1] if len(sys.argv) > 1 else "ModelNet10_36views_224x224")
 EXPECTED_VIEWS = 36
 
 

@@ -1,3 +1,4 @@
+import argparse
 import glob
 from pathlib import Path
 
@@ -265,3 +266,63 @@ def render_modelnet_dataset(
     print("Rendering completed successfully")
     print(f"Processed OFF files: {processed_files}")
     print(f"Rendered dataset saved at: {output_path}")
+
+
+def run_cli(n_views, description=None):
+    """Command-line entry point shared by render_12views.py and render_36views.py.
+
+    Views are evenly spaced around the object: 360 / n_views degrees apart,
+    starting at 0 degrees (12 views -> every 30 degrees, 36 views -> every 10 degrees).
+    """
+    parser = argparse.ArgumentParser(
+        description=description or f"Render ModelNet10 into {n_views} views per object."
+    )
+    parser.add_argument(
+        "--dataset-path",
+        default="ModelNet10",
+        help="Path to the original ModelNet10 folder (default: ModelNet10).",
+    )
+    parser.add_argument(
+        "--output-path",
+        default=None,
+        help="Output folder (default: ModelNet10_<n>views_224x224, with an "
+             "_elev<deg> suffix when --elevation is not 30).",
+    )
+    parser.add_argument(
+        "--elevation",
+        type=float,
+        default=30.0,
+        help="Camera elevation in degrees (default: 30). The paper's elevation "
+             "ablation uses 10 and 50.",
+    )
+    parser.add_argument("--image-size", type=int, default=224)
+    parser.add_argument("--camera-distance", type=float, default=3.8)
+    parser.add_argument("--zoom", type=float, default=0.80)
+    parser.add_argument(
+        "--limit-files-per-split",
+        type=int,
+        default=None,
+        help="Render only the first N files of each class/split (quick test).",
+    )
+    args = parser.parse_args()
+
+    output_path = args.output_path
+    if output_path is None:
+        output_path = f"ModelNet10_{n_views}views_{args.image_size}x{args.image_size}"
+        if args.elevation != 30.0:
+            output_path += f"_elev{args.elevation:g}"
+
+    view_angles = list(range(0, 360, 360 // n_views))
+
+    render_modelnet_dataset(
+        dataset_path=args.dataset_path,
+        output_path=output_path,
+        n_views=n_views,
+        view_angles=view_angles,
+        image_width=args.image_size,
+        image_height=args.image_size,
+        elevation_deg=args.elevation,
+        camera_distance=args.camera_distance,
+        zoom=args.zoom,
+        limit_files_per_split=args.limit_files_per_split,
+    )
